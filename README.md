@@ -46,7 +46,6 @@ Application Angular de gestion des devoirs (assignments) avec système d'authent
 
 ### ✏️ Édition d'assignment (`/assignment/:id/edit`)
 - Formulaire pré-rempli avec les données existantes
-- Validation avant sauvegarde
 
 ### 🔍 Détail d'assignment (`/assignment/:id`)
 - Affichage complet des informations
