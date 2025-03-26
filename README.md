@@ -73,16 +73,19 @@ Application Angular de gestion des devoirs (assignments) avec système d'authent
 1. Cloner le dépôt :
 ```bash
 git clone [votre-repo-url]
-
+```
 
 2. Installer les dépendances :
 ```bash
 npm install
+```
 
 3. Lancer l'application :
 ```bash
 ng serve
+```
 
 4. Ouvrir dans le navigateur :
 ```bash
 http://localhost:4200
+```
