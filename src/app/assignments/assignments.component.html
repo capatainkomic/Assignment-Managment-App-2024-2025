@@ -1,0 +1,61 @@
+<h2>{{title}}</h2>
+
+
+<main class="container">
+  <div class="addBtn">
+    <a routerLink="/add">
+      <button mat-flat-button color="accent" class="addBtn" >Add Assignment</button>
+    </a>
+  </div>
+
+  <ul>
+      @for(assignment of assignments; track assignment.id) {
+        <nav><a routerLink="/assignment/{{assignment.id}}">
+            @if(assignment.submitted) {
+            <li appSubmitted (click)="assignmentClique(assignment)" >
+                The assignement : {{assignment.name}} has been
+                submitted in time!
+            </li>
+            } @else {
+            <li appNotSubmitted (click)="assignmentClique(assignment)">
+                The assignement : {{assignment.name}} is still due on
+                {{assignment.dueDate.toString() | date}}, NOT SUBMITTED YET!
+            </li>
+            }
+          </a></nav>
+      }
+  </ul>
+
+<!--
+  <app-assignment-detail [assignmentTransit]="assignmentSelectionne" (deleteAssignmentEvent)="onDeleteAssignment($event)"></app-assignment-detail>
+</main>
+-->
+
+<!--<router-outlet></router-outlet> -->
+
+<!--
+@if(formVisible){
+  <app-add-assignment (newAssignment)="onNewAssignment($event)"></app-add-assignment>
+}
+-->
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Assignment</th>
+            <th>Due Date</th>
+            <th>Submitted</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(assignment of assignments; track assignment.name) {
+        <tr>
+            <td>{{assignment.name}}</td>
+            <td>{{assignment.dueDate.toString() | date}}</td>
+            <td>{{assignment.submitted}}</td>
+        </tr>
+        }
+    </tbody>
+</table>

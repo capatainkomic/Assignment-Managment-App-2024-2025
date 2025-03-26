@@ -1,0 +1,90 @@
+.sidenav-container {
+  height: calc(100vh - 64px);
+  margin-top: 64px;
+
+}
+
+.sidenav-container .sidenav {
+  width: 270px;
+  border-right: none;
+  border-radius: 0;
+  background: #2c3e50;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.sidenav-container .sidenav.mat-drawer-side {
+  border-right: none;
+}
+
+.sidenav-container .sidenav-header {
+  padding: 16px 0;
+  text-align: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidenav-container .sidenav-header h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.list-item-content {
+  display:flex;
+  align-items: center;
+}
+
+
+.sidenav-container .sidenav mat-nav-list {
+  padding: 0;
+}
+
+.sidenav-container .sidenav mat-nav-list a {
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.sidenav-container .sidenav mat-nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidenav-container .sidenav mat-nav-list a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+}
+
+.sidenav-container .sidenav mat-nav-list mat-icon {
+  margin-right: 16px;
+}
+
+.sidenav-container .mat-drawer-content {
+  overflow: hidden;
+}
+
+/* Style pour le mode réduit */
+.sidenav-container .sidenav:not(.mat-drawer-opened) {
+  width: 72px !important;
+  overflow: hidden;
+}
+
+.sidenav-container .sidenav:not(.mat-drawer-opened) .sidenav-header h3,
+.sidenav-container .sidenav:not(.mat-drawer-opened) mat-nav-list a span {
+  display: none;
+}
+
+.sidenav-container .sidenav:not(.mat-drawer-opened) mat-nav-list a {
+  justify-content: center;
+}
+
+.sidenav-container .sidenav:not(.mat-drawer-opened) mat-nav-list a mat-icon {
+  margin-right: 0;
+}
+
+.sidenav-container .sidenav:not(.mat-drawer-opened) .sidenav-footer button {
+  margin: 0 auto;
+}

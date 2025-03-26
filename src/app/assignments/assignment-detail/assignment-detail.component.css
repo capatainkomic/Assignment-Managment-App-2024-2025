@@ -1,0 +1,138 @@
+h2 {
+  color: #3f51b5;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* Structure de base - Carte */
+mat-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 2rem;
+  border: none;
+}
+
+/* En-tête avec dégradé */
+mat-card-title {
+  background: linear-gradient(135deg, #3f51b5 0%, #2196f3 100%);
+  color: white;
+  padding: 1rem;
+  margin: -2rem -2rem 1.5rem -2rem;
+  border-radius: 8px 8px 0 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Sous-titre */
+mat-card-subtitle {
+  color: #0d47a1;
+  font-size: 1rem;
+  margin: 0.5rem 0 1.5rem 0;
+  font-weight: bold;
+}
+
+/* Contenu principal */
+.container {
+  padding: 1rem 0;
+}
+
+/* Checkbox stylisé */
+.checkbox {
+  display: block;
+  margin: 1.5rem 0;
+  color: #0d47a1;
+  font-weight: 500;
+}
+
+/* Statut de soumission */
+.submitted-message {
+  color: #5fff09;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+/* Conteneur des boutons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Boutons avec dégradés */
+.deleteBtn:not([disabled]) {
+  background: linear-gradient(135deg, #0400fd 0%, #00c8ff 100%);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.editBtn:not([disabled]) {
+  background: linear-gradient(135deg,#3f51b5 0%, #ff16b9 100%);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deleteBtn[disabled] {
+  background: linear-gradient(135deg, #0400fd65 0%, #00c8ff65 100%);
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.editBtn[disabled] {
+  background: linear-gradient(135deg,#3f51b565 0%, #ff16b965 100%);
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Style commun des boutons */
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  flex: 1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Effets au survol */
+button:hover:not([disabled]) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.deleteBtn:hover:not([disabled]) {
+  background: linear-gradient(135deg, #ff0000 0%, #ff1900 100%);
+}
+
+.editBtn:hover:not([disabled]) {
+  background: linear-gradient(135deg, #2bff00 0%, #8cff00 100%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  mat-card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}

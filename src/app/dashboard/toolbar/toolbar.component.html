@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="toolbar" >
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <h1>
+      <a routerLink="/home" class="app-title">{{title}}</a>
+    </h1>
+
+    <span class="spacer"></span>
+
+    @if(authenticationService.isLogged()) {
+      <button mat-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>account_circle</mat-icon>
+        {{authenticationService.getCurrentUser()?.username }}
+      </button>
+
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          Log Out
+        </button>
+      </mat-menu>
+    } @else {
+      <button mat-button routerLink="/login">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
+    }
+
+
+</mat-toolbar>

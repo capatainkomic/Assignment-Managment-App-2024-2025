@@ -1,0 +1,33 @@
+<h2>{{title}}</h2>
+
+@if(formIsSubmitted){
+  <p class="sucessMsg">The assignment has been added successfully</p>
+}@else{
+  <p></p>
+}
+
+<form ngForm #assignmentForm class="form" (submit)="assignmentForm.reset()">
+  <div class="field-container">
+    <mat-form-field class="form-field">
+      <mat-label>Assignment name</mat-label>
+        <input matInput
+            name="name"
+            [(ngModel)]="assignmentName"
+            required>
+    </mat-form-field>
+
+    <mat-form-field class="form-fied">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker"
+          placeholder="MM/DD/YYYY"
+          name="dueDate"
+          [(ngModel)]="assignmentDueDate"
+          required
+      >
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <button [disabled]="(!this.assignmentDueDate) || (!this.assignmentName)" mat-stroked-button color="primary" (click)="onSubmit()">Add Assignment</button>
+</form>

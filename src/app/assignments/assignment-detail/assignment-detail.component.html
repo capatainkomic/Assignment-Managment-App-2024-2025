@@ -1,0 +1,30 @@
+<h2>{{title}}</h2>
+
+@if(assignmentTransit) {
+  <mat-card>
+    <mat-card-content>
+      <mat-card-title>{{assignmentTransit.name}}</mat-card-title>
+      <mat-card-subtitle>{{assignmentTransit.dueDate.toString() | date}}</mat-card-subtitle>
+
+      <div class="container">
+        @if(!assignmentTransit.submitted) {
+          <mat-checkbox (change)="onCheckSubmitBtn()" class="checkbox">Submit Assignment</mat-checkbox>
+        } @else {
+          <p class="submitted-message ">the Assignment has been Submitted !</p>
+        }
+
+        <div class="button-container">
+          <!-- Delete button -->
+          <button class="deleteBtn" [disabled]="!isAdmin()" (click)="onDeleteAssignment()" mat-raised-button color="primary" mat-stroked-button color="primary">Delete</button>
+
+          <!-- Edit button -->
+          <button class="editBtn"  [disabled]="!isAdmin()" (click)="onClickEdit()" mat-stroked-button color="primary">Edit</button>
+
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+}
+
+
+

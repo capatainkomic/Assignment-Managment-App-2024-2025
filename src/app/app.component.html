@@ -1,0 +1,15 @@
+<div class="app-container">
+  <app-toolbar (toggleSidebarEvent)="toggleSidebar()" class="toolbar"></app-toolbar>
+
+  <div class="main-content">
+    <app-sidebar [isOpen]="sidebarToggled"></app-sidebar>
+
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<!--
+<app-assignments></app-assignments>
+-->

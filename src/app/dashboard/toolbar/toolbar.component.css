@@ -1,0 +1,22 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.toolbar h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.toolbar h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1;
+}

@@ -1,0 +1,53 @@
+/* Structure de base */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  margin-top: 64px; /* Hauteur de la toolbar */
+  transition: margin-left 0.3s ease;
+}
+
+/* Quand la sidebar est ouverte */
+app-sidebar[isOpen="true"] .content-wrapper {
+  margin-left: 240px; /* Largeur de la sidebar */
+  width: calc(100% - 240px);
+}
+
+/* Quand la sidebar est fermée */
+app-sidebar[isOpen="false"] .content-wrapper {
+  margin-left: 0;
+  width: 100%;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 20px;
+  transition: all 0.3s ease;
+  max-width: 1200px; /* Largeur max du contenu */
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  app-sidebar[isOpen="true"] + .content-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .content-wrapper {
+    padding: 15px;
+  }
+}

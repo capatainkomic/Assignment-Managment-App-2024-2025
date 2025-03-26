@@ -1,0 +1,56 @@
+<div class="home-container">
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to our Assignment Manager App</h1>
+      <p>The ultimate app to manage your homework and assignments.</p>
+      <div class="cta-buttons">
+        <a mat-raised-button color="primary" routerLink="/add" routerLinkActive="active">Create an Assignment</a>
+        <a mat-stroked-button color="primary" routerLink="/assignments" class="whiteBtn">View All Assignments</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <mat-card class="stat-container">
+      <mat-card-title>Statistics</mat-card-title>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <mat-icon>assignment</mat-icon>
+          <h3>{{ stats.totalAssignments }}</h3>
+          <p>Total of Assignments</p>
+        </div>
+        <div class="stat-item">
+          <mat-icon>check_circle</mat-icon>
+          <h3>{{ stats.submitted }}</h3>
+          <p>Submitted</p>
+        </div>
+        <div class="stat-item">
+          <mat-icon>pending</mat-icon>
+          <h3>{{ stats.pending }}</h3>
+          <p>Pending</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <section class="features-section">
+    <h2>Main Features</h2>
+    <div class="features-grid">
+
+      @for(feature of features; track feature.title){
+        <mat-card class="feature-card">
+          <mat-card-header>
+            <mat-icon mat-card-avatar>{{ feature.icon }}</mat-icon>
+            <mat-card-title>{{ feature.title }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ feature.description }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+
+    </div>
+  </section>
+
+
+</div>
