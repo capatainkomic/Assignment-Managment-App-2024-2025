@@ -69,7 +69,7 @@ Application Angular de gestion des devoirs (assignments) avec système d'authent
 
 1. Cloner le dépôt :
 ```bash
-git clone [votre-repo-url]
+git clone https://github.com/capatainkomic/Assignment-Managment-App-2024-2025-.git
 ```
 
 2. Installer les dépendances :
