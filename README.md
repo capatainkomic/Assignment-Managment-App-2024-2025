@@ -1,5 +1,3 @@
-# Assignment-Managment-App-2024-2025
-
 # Assignment Manager Application
 
 Application Angular de gestion des devoirs (assignments) avec système d'authentification.
