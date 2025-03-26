@@ -1,88 +1,59 @@
-# Assignment Manager Application
+# AssignmentApp
 
-Application Angular de gestion des devoirs (assignments) avec système d'authentification.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
-## Fonctionnalités principales
+## Development server
 
-### 🎯 Gestion des assignments
-- ✅ **Ajout** d'un nouvel assignment (nom + date de rendu)
-- ✏️ **Modification** des assignments existants
-- 🗑️ **Suppression** des assignments
-- 📋 Affichage de la **liste complète** des assignments
-- 🔍 **Détail** de chaque assignment
+To start a local development server, run:
 
-### 🔐 Système d'authentification
-- **Deux types d'utilisateurs** :
-  - 👑 Admin (username: `admin1`, password: `admin1`)
-  - 👤 Utilisateur standard (username: `user1`, password: `user1`)
-
-### 🛡️ Gestion des permissions
-| Action               | Non connecté | Utilisateur | Admin |
-|----------------------|--------------|-------------|-------|
-| Voir la liste        | ✅           | ✅          | ✅    |
-| Ajouter assignment   | ❌           | ✅          | ✅    |
-| Modifier assignment  | ❌           | ❌          | ✅    |
-| Supprimer assignment | ❌           | ❌          | ✅    |
-
-## Architecture des pages
-
-### 🏠 Page d'accueil (`/home`)
-- Tableau de bord avec statistiques :
-  - 📊 Nombre total d'assignments
-  - 📈 Assignments soumis
-  - 📉 Assignments en attente
-
-### 📜 Liste des assignments (`/assignments`)
-- Affichage sous forme de tableau et de cartes
-- Accès aux détails en cliquant sur un assignment
-
-### ➕ Ajout d'assignment (`/add`)
-- Formulaire avec :
-  - Champ pour le nom
-  - Sélecteur de date
-  - Bouton de soumission
-
-### ✏️ Édition d'assignment (`/assignment/:id/edit`)
-- Formulaire pré-rempli avec les données existantes
-
-### 🔍 Détail d'assignment (`/assignment/:id`)
-- Affichage complet des informations
-- Boutons d'action (si permissions suffisantes) :
-  - Modification
-  - Suppression
-  - Marquer comme soumis
-
-### 🔐 Page de connexion (`/login`)
-- Formulaire d'authentification
-- Redirection vers la page d'accueil après connexion
-- Gestion des erreurs (identifiants incorrects)
-
-## Technologies utilisées
-
-- 🅰️ **Angular** (v19)
-
-## Structure (principale ) du projet
-
-
-
-## Installation et lancement
-
-1. Cloner le dépôt :
-```bash
-git clone https://github.com/capatainkomic/Assignment-Managment-App-2024-2025-.git
-```
-
-2. Installer les dépendances :
-```bash
-npm install
-```
-
-3. Lancer l'application :
 ```bash
 ng serve
 ```
 
-4. Ouvrir dans le navigateur :
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
 ```bash
-http://localhost:4200
+ng generate component component-name
 ```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
