@@ -2,7 +2,7 @@
 
 # Assignment Manager Application
 
-Application Angular de gestion des devoirs (assignments) avec système d'authentification et de rôles.
+Application Angular de gestion des devoirs (assignments) avec système d'authentification.
 
 ## Fonctionnalités principales
 
