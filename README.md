@@ -1,6 +1,6 @@
 # Assignment Manager Application
 
-Application Angular de gestion des devoirs (assignments) avec système d'authentification et de rôles.
+Application Angular de gestion des devoirs (assignments) avec système d'authentification .
 
 ## Fonctionnalités principales
 
@@ -84,6 +84,10 @@ ng serve
 http://localhost:4200
 ```
 
+## Auteur(s) et Autrice(s) 
+[capatainkomic](https://github.com/capatainkomic) - Developpeuse principale
 
+## Amélioration du projet 
+Amélioration du projet [ici](https://github.com/Alihou-junior/angular_front) en collaboration avec [Alihou-junior](https://github.com/Alihou-junior)  
 
 
