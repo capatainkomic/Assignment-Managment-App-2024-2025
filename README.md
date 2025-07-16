@@ -1,6 +1,10 @@
 # Assignment Manager Application
 
-Application Angular de gestion des devoirs (assignments) avec système d'authentification .
+Application Angular de gestion des devoirs (assignments) avec système d'authentification .   
+**Demo en ligne** accessible [ici](https://assignment-managment-app-2024-2025.onrender.com/)
+
+## Aperçu de l'application 
+<img width="1894" height="868" alt="Image" src="https://github.com/user-attachments/assets/2a93f420-352d-4e34-b354-65e11cc0365a" />
 
 ## Fonctionnalités principales
 
